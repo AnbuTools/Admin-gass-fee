@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gass Fee & Dollar Buy Admin Pannel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <h1>Gass Fee & Dollar Buy {} Admin Pannel {}</h1>
+    </header>
+    <div class="container">
+        <!-- Admin Panel -->
+        <div class="panel">
+            <h2>Admin Panel</h2>
+
+            <!-- Notice Section -->
+            <div class="notice">
+                <span id="notice-text">Welcome to our shopping site!</span>
+            </div>
+            <div class="form-group">
+                <label for="notice">Set Notice</label>
+                <input type="text" id="notice" placeholder="Enter notice text">
+                <button onclick="setNotice()">Update Notice</button>
+            </div>
+
+            <!-- Product Input -->
+            <div class="form-group">
+                <label for="product-name">Product Name</label>
+                <input type="text" id="product-name" placeholder="Enter product name">
+            </div>
+            <div class="form-group">
+                <label for="product-price">Product Price</label>
+                <input type="number" id="product-price" placeholder="Enter product price">
+            </div>
+            <div class="form-group">
+                <label for="product-image">Product Image URL</label>
+                <input type="text" id="product-image" placeholder="Enter product image URL">
+            </div>
+            <div class="form-group">
+                <label for="product-description">Product Description (Optional)</label>
+                <textarea id="product-description" placeholder="Enter product description"></textarea>
+            </div>
+            <button onclick="addProduct()">Add Product</button>
+        </div>
+
+        <!-- Admin Panel Container (for both product and order lists) -->
+        <div class="panel-container">
+            <!-- Product List -->
+            <div class="panel product-list data-box">
+                <h2>Product List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Image</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list">
+                        <!-- Product rows will appear here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Orders List -->
+            <div class="panel order-list data-box">
+                <h2>Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Telegram Username</th>
+                            <th>Number</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Wallet Address</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="order-list">
+                        <!-- Orders will appear here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
